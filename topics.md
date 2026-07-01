@@ -4,7 +4,13 @@
 
 Machine unlearning is a growing area of research that focuses on how to effectively remove the influence of specific data points from a model that has already been trained. Instead of retraining a model from scratch, which can be computationally expensive and time-consuming, machine unlearning aims to “forget” selected pieces of data in a more efficient way while preserving the overall performance of the model.
 This is particularly important in contexts where data must be removed after training, such as complying with privacy regulations (e.g., a user requesting deletion of their data), filtering out spam or corrupted inputs, or eliminating harmful, biased, or outdated information that may negatively affect model behavior.
+
 Our current work specifically explores efficient and approximate approaches to machine unlearning in recommender systems. Since these systems often operate on large-scale, continuously evolving datasets, exact retraining is often impractical. Instead, we investigate methods that can approximate the removal of data influence with minimal computational overhead, while still maintaining high-quality recommendations and system stability.
+
+Possible directions for research assistant work are:
+
+- **Fairness of Machine Unlearning.** Machine unlearning has the potential to change the fairness of a model. This project aims to investigate and evaluate the impact of machine unlearning on fairness across diverse model architectures, datasets, and unlearning scenarios under a range of fairness settings.
+- **Strengthening the Evaluation of Machine Unlearning Effectiveness.** Membership inference attacks (MIAs) determine whether a given sample was used to train a model. If an MIA can correctly identify that a forgotten sample was part of the training data of an unlearned model, this indicates that the unlearning process was ineffective for that sample. Consequently, MIAs provide a practical means of detecting unlearning failures. The goal of this project is to implement and evaluate MIAs as a tool for assessing the effectiveness of machine unlearning.
 
 
 ---
